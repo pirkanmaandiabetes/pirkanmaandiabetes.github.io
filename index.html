@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pirkanmaan diabetesyhdistysten alueverkosto</title>
+  <style>
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 200;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-200.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 200;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-700.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.svg#SourceSansPro') format('svg');
+    }
+
+    :root {
+      --pirha-dark-blue: #11285E;
+      --pirha-plum: #721365;
+      --pirha-tangerine: #FF8C01;
+      --pirha-light-pink: #FF5883;
+      --pirha-text-on-plum: #FFC580;
+      --link-color: #284A96;
+      --offset-white: #f1f1f1;
+    }
+
+    html {
+      background-color: var(--pirha-plum);
+    }
+
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header nav,
+    main,
+    footer nav {
+      max-width: 35rem;
+      padding: 1.2rem;
+      margin: auto;
+    }
+
+    header, footer {
+      margin: 0;
+      background-color: var(--pirha-plum);
+      color: var(--pirha-text-on-plum);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    main {
+      padding-bottom: 12em;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+
+    a:link {
+      color: var(--link-color);
+    }
+
+    a:visited {
+      color: var(--pirha-plum);
+    }
+
+    header a, header a:link, header a:visited,
+    footer a, footer a:link, footer a:visited {
+      color: var(--pirha-text-on-plum);
+      text-decoration: none;
+    }
+
+    header a:hover, header a:active, header a.active,
+    footer a:hover, footer a:active, footer a.active {
+      color: white;
+    }
+
+    ul {
+      margin-bottom: 2.5em;
+    }
+
+    li {
+      margin-bottom: 0.8em;
+    }
+
+    nav ul {
+      padding: 0;
+      margin-bottom: auto;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 2em;
+      margin-bottom: auto;
+    }
+
+    nav ul li:last-of-type {
+      margin-right: 0;
+    }
+
+    main > img {
+      max-height: 20vh;
+      max-width: 50vw;
+      width: 100px;
+      float: right;
+      margin-top: 40px;
+      font-size: xx-large;
+      height: 3em;
+    }
+
+    section {
+      padding-top: 4em;
+    }
+
+    h1, h2, h3 {
+      color: var(--pirha-dark-blue);
+    }
+
+    h2 {
+      margin-top: 2em;
+    }
+
+    #ajankohtaista h3 {
+      margin-top: 2em;
+    }
+
+    .business-card {
+      background-color: var(--offset-white);
+      position: relative;
+      min-height: 12.5em;
+      width: 25em;
+      margin-left: 2em;
+      box-shadow: 2px 5px 5px lightgray;
+    }
+
+    .business-card picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 10em;
+    }
+
+    .business-card picture img {
+      height: 10em;
+      z-index: 3;
+    }
+
+    .business-card h3 {
+      position: absolute;
+      left: 1.2em;
+    }
+
+    address {
+      position: absolute;
+      bottom: 1.2em;
+      left: 1.2em;
+    }
+
+    footer p {
+      display: inline-block;
+      margin-right: 2em;
+    }
+
+    @media screen {
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+    }
+
+    @media print {
+      body {
+        font-family: 'Source Sans Pro', serif;
+      }
+      main > img {
+        width: 100px;
+        float: right;
+      }
+      header, footer {
+        display: none;
+      }
+    }
+
+    @media print {
+      section {
+        break-before: page;
+      }
+      section:first-of-type {
+        break-before: initial;
+      }
+    }
+
+    @media print and (min-aspect-ratio: 1/1) {
+      section:first-of-type {
+        break-before: page;
+      }
+    }
+
+    @media screen and (min-width: 100rem) {
+      main > img {
+        position: absolute;
+        top: 10rem;
+        left: calc(15vw - 8.75rem);
+        width: 20vw;
+        height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#yhdistykset">Yhdistykset</a></li>
+        <li><a href="#ajankohtaista">Ajankohtaista</a></li>
+        <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <img src="pirha__diabetes.svg" />
+    <h1>Pirkanmaan diabetesyhdistysten alueverkosto</h1>
+    <p>Alueverkosto edustaa Pirkanmaan diabetesyhdistyksiä Pirkanmaan hyvinvointialueen
+      suuntaan.</p>
+    <section id="yhdistykset">
+      <h2>Yhdistykset</h2>
+      <p>Pirkanmaan hyvinvointialueella toimii kymmenen alueellista yhdistystä:</p>
+      <ul>
+        <li><a
+          href="https://www.diabetes.fi/yhteiso/jasenyhdistykset/paikallisyhdistysten_infosivut/akaa">Akaan
+            Seudun Diabetesyhdistys ry</a></li>
+        <li><a href="http://www.diabeteskyrosjarvi.net/">Kyrösjärven Seudun Diabetesyhdistys
+            ry</a></li>
+        <li><a href="http://www.diabetes-lempaala-vesilahti.net/">Lempäälän-Vesilahden
+            Diabetesyhdistys ry</a></li>
+        <li><a href="http://mantanseudundiabetes.fi/">Mäntän Seudun Diabetesyhdistys ry</a></li>
+        <li><a
+          href="https://www.diabetes.fi/yhteiso/jasenyhdistykset/paikallisyhdistysten_infosivut/orivesi">Oriveden
+            Seudun Diabetesyhdistys ry</a></li>
+        <li><a
+          href="https://www.diabetes.fi/yhteiso/jasenyhdistykset/paikallisyhdistysten_infosivut/parkano">Parkanon
+            Seudun Diabetesyhdistys ry</a></li>
+        <li><a href="http://www.sastamalandiabetesyhdistys.net/">Sastamalan Diabetesyhdistys
+            ry</a></li>
+        <li><a href="http://www.tampereendiabetesyhdistys.fi/">Tampereen Diabetesyhdistys
+            ry</a></li>
+        <li><a href="http://www.valkeakoskendiabetes.com/">Valkeakosken Diabetesyhdistys
+            ry</a></li>
+        <li><a href="http://www.ylojarvendiabetesyhdistys.fi/">Ylöjärven Diabetesyhdistys
+            ry</a></li>
+      </ul>
+      <p>Alueellisten yhdistysten lisäksi Pirkanmaan hyvinvointialueella toimii kolme valtakunnallista
+        yhdistystä:</p>
+      <ul>
+        <li><a href="http://hypokoira.fi/">Hypokoira ry</a></li>
+        <li><a href="https://www.t1d.fi/">Diabetesseura T1D ry</a></li>
+        <li><a href="https://ykkostyypit.fi/">Ykköstyypit ry</a></li>
+      </ul>
+      <p>Voit liittyä valitsemasi yhdistyksen jäseneksi <a
+        href="https://www.diabetes.fi/yhteiso/liity_jaseneksi">Diabetesliiton sivuilla</a>.</p>
+    </section>
+    <section id="ajankohtaista">
+      <h2>Ajankohtaista</h2>
+      <h3>23.12.2022 Aloite pitkäaikaissairauksien huomioimisesta hyvinvointialueen
+        järjestäytymisessä</h3>
+      <p>Alueverkosto valmistelee parhaillaan laajaa aloitetta hyvinvointialueelle
+        pitkäaikaissairauksien paremmasta huomioimisesta.</p>
+      <!-- 
+      <h3>15.12.2022 Kannanotto insuliinien apteekkivaihdosta</h3>
+      <p></p>
+      -->
+      <h3>20.9.2022 Aloite hoitotarvikkeiden kilpailuttamisesta</h3>
+      <p>Alueverkosto esitti hyvinvointialueen monipalveluvaliokunnan kautta aloitteen
+        hoitotarvikkeiden kilpailuttamiseksi uudella tavalla Pirkanmaan hyvinvointialueella. Ks.
+        <a href="./Hoitotarvikkeiden_kilpailutus.docx.pdf">aloite</a> sekä <a
+        href="./Liite-Esimerkki_kilpailutuksesta_jossa_useampi_tarvike_per_kategoria.pdf">liite</a>.</p>
+      <p>Aloite luovutettiin hyvinvointialueen hankintajohtaja Anniina Tirroselle, joka kiitti
+        verkostoa erinomaisesti valmistellusta ja arvokkaasta aloitteesta ja lupasi omasta
+        puolestaan edistää asiaa.</p>
+    </section>
+    <section id="yhteystiedot">
+      <h2>Yhteystiedot</h2>
+      <div class="business-card">
+        <picture>
+          <source srcset="MikaelRinnetmaki.jpg MikaelRinnetmaki2x.jpg 2x">
+          <img src="MikaelRinnetmaki.jpg" alt="" />
+        </picture>
+        <h3>Pirkanmaan diabetesyhdistysten alueverkoston yhteyshenkilö</h3>
+        <address>
+          Mikael Rinnetmäki<br />
+          <a href="mailto:mikael.rinnetmaki@gmail.com">mikael.rinnetmaki@gmail.com</a><br />
+          <a href="tel:+358503855511">050 385 5511</a>
+        </address>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <p>Päivitetty 23.12.2022</p>
+      <a href="https://github.com/pirkanmaandiabetes/pirkanmaandiabetes.github.io">Sivun lähdekoodi</a>
+    </nav>
+  </footer>
+</body>
+
+</html>
