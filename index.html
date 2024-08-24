@@ -161,8 +161,14 @@
       font-size: xx-large;
       height: 3em;
     }
+    section > img {
+      max-width: 100%;
+    }
     section, #yhdistykset nav {
       padding-top: 4em;
+    }
+    section > section {
+      padding-top: 0em;
     }
     h1, h2, h3, h4 {
       color: var(--pirha-dark-blue);
@@ -206,7 +212,7 @@
       position: absolute;
       left: 1.2em;
     }
-    address {
+    .business-card address {
       position: absolute;
       bottom: 1.2em;
       left: 1.2em;
@@ -453,7 +459,6 @@
       </ul>
       <p>Voit liittyä valitsemasi yhdistyksen jäseneksi <a
         href="https://www.diabetes.fi/yhteiso/liity_jaseneksi">Diabetesliiton sivuilla</a>.</p>
-
     <nav id="kartta">
       <h3>Yhdistysten toimialueet</h3>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="229 1000 206 236">
@@ -544,48 +549,148 @@
             <text class="yhdistys" x="332" y="1230">Huittisten seudun diabetesyhdistys</text>
           </a>
         </g>
-        <a id="yhdistyslinkki"><text id="yhdistyslinkkiteksti" class="yhdistys" x="332" y="1230"></text></a>
+        <a id="yhdistyslinkki"><text
+          id="yhdistyslinkkiteksti" class="yhdistys" x="332" y="1230"></text></a>
         </svg>
     </nav>
     </section>
     <section id="ajankohtaista">
       <h2>Ajankohtaista</h2>
-      <h3>14.1.2023 Aloite pitkäaikaissairauksien huomioimisesta hyvinvointialueen
-        järjestäytymisessä</h3>
-      <p>Alueverkosto valmistelee parhaillaan laajaa aloitetta hyvinvointialueelle
-        pitkäaikaissairauksien paremmasta huomioimisesta.</p>
-      <h3>12.1.2023 Ajankohtaista tietoa diabeteksesta Pirkanmaalla</h3>
-      <p>Diabetesliitto on koostanut <a
-        href="https://www.diabetes.fi/files/22368/Pirkanmaa_2023_hyvinvointialueraportti.pdf">raportin</a>
-        diabeteksen hoidon tilasta Pirkanmaan hyvinvointialueella. Muutamia poimintoja avainluvuista:</p>
-        <h4>Diabetesta sairastavien määrä</h4>
-        <table>
-          <tr><th>Kokonaismäärä</th><td>40&nbsp;755</td></tr>
-          <tr><th>Tyypin 1 diabeetikot</th><td>5&nbsp;346</td></tr>
-          <tr><th>Tyypin 2 diabeetikot</th><td>35&nbsp;409</td></tr>
-        </table>
-        <h4>Sairaanhoidon kustannukset</h4>
-        <table>
-          <tr><td></td><th>Ei&nbsp;lisäsairauksia</th><th>Lisäsairauksia</th></tr>
-          <tr><th>Tyypin 1 diabetes</th><td>3&nbsp;500&nbsp;€</td><td>5&nbsp;915&nbsp;€</td></tr>
-          <tr><th>Tyypin 2 diabetes</th><td>3&nbsp;036&nbsp;€</td><td>7&nbsp;096&nbsp;€</td></tr>
-        </table>
-      <p>Raportista löytyy myös tilastotietoa hoitotasapainosta, sekä diabetesta sairastavien
-        että terveydenhuollon ammattilaisten näkemyksiä hoidon saatavuudesta ja erittely diabetesta
-        sairastavien tiedon ja tuen tarpeista. <a
-        href="https://www.diabetes.fi/files/22368/Pirkanmaa_2023_hyvinvointialueraportti.pdf">Lue lisää!</a></p>
+      <section>
+        <h3>29.8.2024 Diabetes ja digitalisaatio -tilaisuus</h3>
+        <p>Klo 11.30 - 14.00, HealthHUB, FM5, 1.krs. Ravintola Ellipsin aulassa</p>
+        <img src="DiabetesJaDigitalisaatio.png" />
+        <p>Tervetuloa mukaan inspiroivaan tapahtumaan, jossa tarkastellaan hyötyjä, joita
+          digitaaliset työkalut tuovat diabeteksen hoitoon!</p>
+        <h4>11.30 Tervetuloa</h4>
+        <p>Voit halutessasi vaikka ottaa lounaan mukaan viereisestä Ellipsi-ravintolasta.</p>
+        <h4>11.35 Diabetesliitto</h4>
+        <p>Monet diabetesta sairastavat olisivat halukkaita hyödyntämään digitaalisia palveluita
+          terveydenhuollossa selvästi nykyistä enemmän. Yli 50 prosenttia liiton
+          diabetesbarometriin vastanneista olisi valmis hyödyntämään digitaalisia palveluja
+          hoitonsa seurannassa, sekä vastaanottokäyntien lisänä että vaihtoehtona niille.</p>
+        <h4>11.45 Yritysten ratkaisut</h4>
+        <p>Alan johtavat yritykset esittelevät diabeteksen hoitoa tehostavia sovelluksia,
+          hoitopolkuja ja laitteita. Eri ratkaisut palvelevat eri potilasryhmiä ja eri
+          elämäntilanteita.</p>
+        <ul>
+          <li><a href="https://gsbalance.com/fi">GS Balance</a></li>
+          <li><a href="https://www.prowellness.com/">ProWellness</a></li>
+          <li><a href="https://diabetessara.fi/">Sarawell</a></li>
+          <li><a href="https://www.sensotrend.fi/">Sensotrend</a></li>
+          <li><a href="https://thermidas.fi/">Thermidas</a></li>
+        </ul>
+        <h4>12.00 Keskustelua</h4>
+        <p>Keskustellaan siitä, kuinka päästäisiin tilanteeseen, jossa kullekin diabetesta
+          sairastavalle löytyy häntä parhaiten palveleva digiratkaisu ja kuinka kukin ratkaisu
+          voidaan integroida saumattomaksi osaksi asiakas- ja potilastietojärjestelmiä sekä
+          asiointialustoja.</p>
+        <h4>12.30 Tarkemmat esittelyt</h4>
+        <p>Diabetesliitto ja yritykset ovat tavattavissa ja esittelevät toimintaansa ja tuotteitaan
+          tarkemmin. Tässä on aikaa yksityiskohtaisemmille kysymyksille ja keskusteluille.</p>
+        <h4>14.00 Tilaisuus päättyy</h4>
+        <p>Tilaisuus on avoin kaikille ja on suunnattu erityisesti terveydenhuollon
+          ammattilaisille, tietohallinnon edustajille sekä päättäjille. Kutsua saa jakaa!</p>
+        <p>
+          Linkki ilmoittautumiseen: <a
+          href="https://forms.office.com/e/HzrTZTbsJg">https://forms.office.com/e/HzrTZTbsJg</a>
+        </p>
+        <p>Lämpimästi tervetuloa!</p>
+        <address>
+          Kaisa Luostarinen<br />
+          projektipäällikkö<br />
+          Digitaalisten terveysratkaisuiden kaupallistaminen ja skaalautuminen: DH2<br />
+          Pirkanmaan hyvinvointialue<br />
+          Integraation toimialue<br />
+          Jatkuvan kehittämisen vastuuyksikkö<br />
+          <a href="tel:+358401217598">040 121 7598</a>
+        </address>
+        <p>Tarkoituksena on kertoa, että diabeteksen kanssa elävillä ihmisillä on monenlaisia eri
+          tarpeita eikä yksikään digiratkaisu palvele niistä kaikkia. Tarvitsemme pikemminkin
+          ekosysteemin, jossa potilaat pääsevät valitsemaan heidän elämäntilanteeseensa parhaiten
+          sopivat ja heidän omia tavoitteitaan parhaiten palvelevat sovellukset.</p>
+      </section>
+      <section>
+        <h3>21.8.2024 mietintö pitkäaikaissairauksista, diabetes yhtenä kärkenä</h3>
+        <p>Pirhan <a
+          href="https://www.pirha.fi/paatoksenteko/jaostot-ja-valiokunnat#bidr_accordionHeading"
+          >monipalveluvaliokunta</a> päätti <a
+          href="https://pirha.cloudnc.fi/fi-FI/Toimielimet/Monipalveluvaliokunta/Kokous_2182024"
+          >kokouksessaan 21.8.2024</a> valmistella hyvinvointialueen toiminnan suunnittelua tukevan
+          muistion pitkäaikaissairauksista. Diabeteksen hoito tulee olemaan yksi kärki tuossa
+          muistiossa.</p>
+      </section>
+      <section>
+        <h3>3.4.2024 Raportti diabetesta sairastavien hoidon järjestämisen kehittämisestä</h3>
+        <p>Diabetesliiton asiantuntijaryhmä on koonnut diabeteksen hoidon järjestämisestä
+          päättäville kahdeksan toimenpide-ehdotusta, joilla se nostaa esiin diabeteksen hoidon
+          järjestämisen kansallisia kipukohtia ja ratkaisuja niihin:</p>
+        <ol>
+          <li>Elintapaohjausta ja tukea elintapamuutoksiin tarjolle.</li>
+          <li>Diabeteksen hoito keskitettävä osaamiskeskuksiin ja verkostoihin.</li>
+          <li>Diabeteksen hoito järjestettävä yksilöllisesti ja monikanavaisuutta hyödyntäen.</li>
+          <li>Alku- ja jatko-ohjaus sekä hoitosuunnitelma laajasti käyttöön.</li>
+          <li>Psykososiaalista tukea tarjolle matalalla kynnyksellä.</li>
+          <li>Digitaaliset hoitopolut käyttöön kaikilla hyvinvointialueilla.</li>
+          <li>Diabeteshoitajien määrä ja osaaminen turvattava.</li>
+          <li>Älypumppuhoito laajasti käyttöön kansallisesti.</li>
+        </ol>
+      </section>
+      <section>
+        <h3>15.11.2023 Diabetesbarometri kokoaa yhteen tiedot diabeteksen hoidosta
+          hyvinvointialueilla</h3>
+        <p>Diabetesviikolla 15.11.2023 julkistettu Diabetesbarometri 2023 kokosi ensi kertaa yhteen
+          tiedot diabeteksen hoidosta hyvinvointialueilla. Barometrikyselyyn vastasi 7&nbsp;924
+          diabetesta sairastavaa henkilöä ja heidän läheistään.
+        </p>
+        <img src="Diabetesbarometri-Pirkanmaa.png" />
+        <p>Barometrista on luotu myös erillinen, nimenomaan Pirkanmaan hyvinvointialueen
+          ominaispiirteitä korostava esitys. <a
+          href="https://www.diabetes.fi/yhteiso/vaikuttaminen/tutkimukset_ja_selvitykset/diabetesta_sairastavien_hoidon_jarjestamisen_kehittaminen#6c00d4de"
+          >Lue lisää!</a>
+        </p>
+      </section>
+      <section>
+        <h3>12.1.2023 Ajankohtaista tietoa diabeteksesta Pirkanmaalla</h3>
+        <p>Diabetesliitto on koostanut <a
+          href="https://www.diabetes.fi/files/22368/Pirkanmaa_2023_hyvinvointialueraportti.pdf"
+          >raportin</a> diabeteksen hoidon tilasta Pirkanmaan hyvinvointialueella. Muutamia
+          poimintoja avainluvuista:</p>
+          <h4>Diabetesta sairastavien määrä</h4>
+          <table>
+            <tr><th>Kokonaismäärä</th><td>40&nbsp;755</td></tr>
+            <tr><th>Tyypin 1 diabeetikot</th><td>5&nbsp;346</td></tr>
+            <tr><th>Tyypin 2 diabeetikot</th><td>35&nbsp;409</td></tr>
+          </table>
+          <h4>Sairaanhoidon kustannukset</h4>
+          <table>
+            <tr><td></td><th>Ei&nbsp;lisäsairauksia</th><th>Lisäsairauksia</th></tr>
+            <tr><th>Tyypin 1 diabetes</th><td>3&nbsp;500&nbsp;€</td><td>5&nbsp;915&nbsp;€</td></tr>
+            <tr><th>Tyypin 2 diabetes</th><td>3&nbsp;036&nbsp;€</td><td>7&nbsp;096&nbsp;€</td></tr>
+          </table>
+        <p>Raportista löytyy myös tilastotietoa hoitotasapainosta, sekä diabetesta sairastavien
+          että terveydenhuollon ammattilaisten näkemyksiä hoidon saatavuudesta ja erittely diabetesta
+          sairastavien tiedon ja tuen tarpeista. <a
+          href="https://www.diabetes.fi/files/22368/Pirkanmaa_2023_hyvinvointialueraportti.pdf">Lue
+          lisää!</a></p>
+      </section>
       <!-- 
       <h3>15.12.2022 Kannanotto insuliinien apteekkivaihdosta</h3>
       <p></p>
       -->
-      <h3>20.9.2022 Aloite hoitotarvikkeiden kilpailuttamisesta</h3>
-      <p>Alueverkosto esitti hyvinvointialueen monipalveluvaliokunnan kautta aloitteen
-        hoitotarvikkeiden kilpailuttamiseksi uudella tavalla Pirkanmaan hyvinvointialueella. Ks.
-        <a href="./Hoitotarvikkeiden_kilpailutus.docx.pdf">aloite</a> sekä <a
-        href="./Liite-Esimerkki_kilpailutuksesta_jossa_useampi_tarvike_per_kategoria.pdf">liite</a>.</p>
-      <p>Aloite luovutettiin hyvinvointialueen hankintajohtaja Anniina Tirroselle, joka kiitti
-        verkostoa erinomaisesti valmistellusta ja arvokkaasta aloitteesta ja lupasi omasta
-        puolestaan edistää asiaa.</p>
+      <section>
+        <h3>20.9.2022 Aloite hoitotarvikkeiden kilpailuttamisesta</h3>
+        <p>Alueverkosto esitti hyvinvointialueen <a
+          href="https://www.pirha.fi/paatoksenteko/jaostot-ja-valiokunnat#bidr_accordionHeading"
+          >monipalveluvaliokunnan</a> kautta aloitteen hoitotarvikkeiden kilpailuttamiseksi uudella
+          tavalla Pirkanmaan hyvinvointialueella. Ks.
+          <a href="./Hoitotarvikkeiden_kilpailutus.docx.pdf">aloite</a> sekä <a
+          href="./Liite-Esimerkki_kilpailutuksesta_jossa_useampi_tarvike_per_kategoria.pdf"
+          >liite</a>.</p>
+        <p>Aloite luovutettiin hyvinvointialueen hankintajohtaja Anniina Tirroselle, joka kiitti
+          verkostoa erinomaisesti valmistellusta ja arvokkaasta aloitteesta ja lupasi omasta
+          puolestaan edistää asiaa.</p>
+      </section>
     </section>
     <section id="yhteystiedot">
       <h2>Yhteystiedot</h2>
@@ -605,8 +710,9 @@
   </main>
   <footer>
     <nav>
-      <p>Päivitetty 18.7.2023</p>
-      <a href="https://github.com/pirkanmaandiabetes/pirkanmaandiabetes.github.io">Sivun lähdekoodi</a>
+      <p>Päivitetty 24.8.2024</p>
+      <a href="https://github.com/pirkanmaandiabetes/pirkanmaandiabetes.github.io">Sivun
+      lähdekoodi</a>
     </nav>
   </footer>
   <script>
