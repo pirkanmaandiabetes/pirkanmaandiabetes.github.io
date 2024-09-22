@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diabetes ja digitalisaatio -tilaisuus 29.8.2024</title>
+  <style>
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 200;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-200.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 200;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-200italic.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-regular.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-italic.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-700.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700.svg#SourceSansPro') format('svg');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.eot');
+      src: local(''),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff') format('woff'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.ttf') format('truetype'),
+        url('./fonts/source-sans-pro-v21-latin-ext_latin-700italic.svg#SourceSansPro') format('svg');
+    }
+    :root {
+      --pirha-dark-blue: #11285E;
+      --pirha-plum: #721365;
+      --pirha-tangerine: #FF8C01;
+      --pirha-light-pink: #FF5883;
+      --pirha-text-on-plum: #FFC580;
+      --link-color: #284A96;
+      --offset-white: #f1f1f1;
+    }
+    html {
+      background-color: var(--pirha-plum);
+    }
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header nav,
+    main,
+    footer nav {
+      max-width: 35rem;
+      padding: 1.2rem;
+      margin: auto;
+    }
+    header, footer {
+      margin: 0;
+      background-color: var(--pirha-plum);
+      color: var(--pirha-text-on-plum);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    main {
+      padding-bottom: 12em;
+    }
+    a {
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+    a:link {
+      color: var(--link-color);
+    }
+    a:visited {
+      color: var(--pirha-plum);
+    }
+    a.expired {
+      cursor: not-allowed;
+    }
+    header a, header a:link, header a:visited,
+    footer a, footer a:link, footer a:visited {
+      color: var(--pirha-text-on-plum);
+      text-decoration: none;
+    }
+    header a:hover, header a:active, header a.active,
+    footer a:hover, footer a:active, footer a.active {
+      color: white;
+    }
+    ul {
+      margin-bottom: 2.5em;
+    }
+    li {
+      margin-bottom: 0.8em;
+    }
+    nav ul {
+      padding: 0;
+      margin-bottom: auto;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 2em;
+      margin-bottom: auto;
+    }
+    nav ul li:last-of-type {
+      margin-right: 0;
+    }
+    main > img {
+      max-height: 20vh;
+      max-width: 50vw;
+      width: 100px;
+      float: right;
+      margin-top: 40px;
+      font-size: xx-large;
+      height: 3em;
+    }
+    section > img {
+      max-width: 100%;
+    }
+    section, #yhdistykset nav {
+      padding-top: 4em;
+    }
+    section > section {
+      padding-top: 0em;
+    }
+    h1, h2, h3, h2 {
+      color: var(--pirha-dark-blue);
+    }
+    h2 {
+      margin-bottom: 0.15em;
+    }
+    h2 + p {
+      margin-top: 0;
+    }
+    #ajankohtaista h3 {
+      margin-top: 2em;
+    }
+    th {
+      text-align: left;
+    }
+    td {
+      text-align: right;
+      padding-left: 1em;
+    }
+    .business-card {
+      background-color: var(--offset-white);
+      position: relative;
+      min-height: 12.5em;
+      width: 25em;
+      max-width: calc(100vw - 2em);
+      margin-left: 2em;
+      box-shadow: 2px 5px 5px lightgray;
+    }
+    .business-card picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 10em;
+    }
+    .business-card picture img {
+      height: 10em;
+      z-index: 3;
+    }
+    .business-card h3 {
+      position: absolute;
+      left: 1.2em;
+    }
+    .business-card address {
+      position: absolute;
+      bottom: 1.2em;
+      left: 1.2em;
+    }
+    footer p {
+      display: inline-block;
+      margin-right: 2em;
+    }
+    @media screen {
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+    }
+    @media print {
+      body {
+        font-family: 'Source Sans Pro', serif;
+      }
+      main > img {
+        width: 100px;
+        float: right;
+      }
+      header, footer {
+        display: none;
+      }
+    }
+    @media print {
+      section {
+        break-before: page;
+      }
+      section:first-of-type {
+        break-before: initial;
+      }
+    }
+    @media print and (min-aspect-ratio: 1/1) {
+      section:first-of-type {
+        break-before: page;
+      }
+    }
+    @media screen and (max-width: 30rem) {
+      .business-card {
+        margin-left: 0;
+      }
+    }
+    @media screen and (max-width: 380px) {
+      .business-card picture {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 100rem) {
+      main > img {
+        position: absolute;
+        top: 10rem;
+        left: calc(15vw - 8.75rem);
+        width: 20vw;
+        height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#yhdistykset">Yhdistykset</a></li>
+        <li><a href="index.html#ajankohtaista">Ajankohtaista</a></li>
+        <li><a href="index.html#yhteystiedot">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>29.8.2024 Diabetes ja digitalisaatio -tilaisuus</h1>
+    <p>Klo 11.30 - 14.00, HealthHUB, FM5, 1.krs. Ravintola Ellipsin aulassa</p>
+    <img src="DiabetesJaDigitalisaatio.png" />
+    <p>Tervetuloa mukaan inspiroivaan tapahtumaan, jossa tarkastellaan hyötyjä, joita digitaaliset
+      työkalut tuovat diabeteksen hoitoon!</p>
+    <h2>11.30 Tervetuloa</h2>
+    <p>Voit halutessasi vaikka ottaa lounaan mukaan viereisestä Ellipsi-ravintolasta.</p>
+    <h2>11.35 Diabetesliitto</h2>
+    <p>Monet diabetesta sairastavat olisivat halukkaita hyödyntämään digitaalisia palveluita
+      terveydenhuollossa selvästi nykyistä enemmän. Yli 50 prosenttia liiton diabetesbarometriin
+      vastanneista olisi valmis hyödyntämään digitaalisia palveluja hoitonsa seurannassa, sekä
+      vastaanottokäyntien lisänä että vaihtoehtona niille.</p>
+    <h2>11.45 Yritysten ratkaisut</h2>
+    <p>Alan johtavat yritykset esittelevät diabeteksen hoitoa tehostavia sovelluksia, hoitopolkuja
+      ja laitteita. Eri ratkaisut palvelevat eri potilasryhmiä ja eri elämäntilanteita.</p>
+    <ul>
+      <li><a href="https://gsbalance.com/fi">GS Balance</a></li>
+      <li><a href="https://www.prowellness.com/">ProWellness</a></li>
+      <li><a href="https://diabetessara.fi/">Sarawell</a></li>
+      <li><a href="https://www.sensotrend.fi/">Sensotrend</a></li>
+      <li><a href="https://thermidas.fi/">Thermidas</a></li>
+    </ul>
+    <h2>12.00 Keskustelua</h2>
+    <p>Keskustellaan siitä, kuinka päästäisiin tilanteeseen, jossa kullekin diabetesta
+      sairastavalle löytyy häntä parhaiten palveleva digiratkaisu ja kuinka kukin ratkaisu voidaan
+      integroida saumattomaksi osaksi asiakas- ja potilastietojärjestelmiä sekä
+      asiointialustoja.</p>
+    <h2>12.30 Tarkemmat esittelyt</h2>
+    <p>Diabetesliitto ja yritykset ovat tavattavissa ja esittelevät toimintaansa ja tuotteitaan
+      tarkemmin. Tässä on aikaa yksityiskohtaisemmille kysymyksille ja keskusteluille.</p>
+    <h2>14.00 Tilaisuus päättyy</h2>
+    <p>Tilaisuus on avoin kaikille ja on suunnattu erityisesti terveydenhuollon
+      ammattilaisille, tietohallinnon edustajille sekä päättäjille. Kutsua saa jakaa!</p>
+    <p>
+      Linkki ilmoittautumiseen: <a class="expired" target="_blank"
+      href="https://forms.office.com/e/HzrTZTbsJg">https://forms.office.com/e/HzrTZTbsJg</a>
+    </p>
+    <p>Lämpimästi tervetuloa!</p>
+    <address>
+      Kaisa Luostarinen<br />
+      projektipäällikkö<br />
+      Digitaalisten terveysratkaisuiden kaupallistaminen ja skaalautuminen: DH2<br />
+      Pirkanmaan hyvinvointialue<br />
+      Integraation toimialue<br />
+      Jatkuvan kehittämisen vastuuyksikkö<br />
+      <a href="tel:+358401217598">040 121 7598</a>
+    </address>
+    <p>Tarkoituksena on kertoa, että diabeteksen kanssa elävillä ihmisillä on monenlaisia eri
+      tarpeita eikä yksikään digiratkaisu palvele niistä kaikkia. Tarvitsemme pikemminkin
+      ekosysteemin, jossa potilaat pääsevät valitsemaan heidän elämäntilanteeseensa parhaiten
+      sopivat ja heidän omia tavoitteitaan parhaiten palvelevat sovellukset.</p>
+  </main>
+  <footer>
+    <nav>
+      <p>Päivitetty 22.9.2024</p>
+      <a href="https://github.com/pirkanmaandiabetes/pirkanmaandiabetes.github.io">Sivun
+      lähdekoodi</a>
+    </nav>
+  </footer>
+  <script>
+    function addLinks() {
+      const links = document.querySelectorAll('.kunnat a');
+      const link = document.getElementById('yhdistyslinkki');
+      const text = document.getElementById('yhdistyslinkkiteksti');
+      links.forEach((a) => {
+        a.addEventListener('click', (e) => {
+      e.preventDefault();
+      text.innerHTML = a.getElementsByClassName('yhdistys')[0].innerHTML;
+      link.setAttribute('href', a.href.baseVal);
+        });
+      });
+    }
+    const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!isHoverableDevice) {
+      addLinks();
+    }
+  </script>
+</body>
+
+</html>
